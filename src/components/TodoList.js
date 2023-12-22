@@ -1,8 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
 import { getTodos, addTodo, updateTodo, deleteTodo } from "../api/TodosApi"
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
 
 const TodoList = () => {
@@ -44,7 +43,7 @@ const TodoList = () => {
 
     const newItemSection = (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="new-todo">Enter a new todo item</label>
+            <label htmlFor="new-todo">Enter New todo.... </label>
             <div className="new-todo">
                 <input
                     type="text"
@@ -54,9 +53,9 @@ const TodoList = () => {
                     placeholder="Enter new todo"
                 />
             </div>
-            {/* <button className="submit">
+            { <button className="submit">
                 <FontAwesomeIcon icon={faUpload} />
-            </button> */}
+            </button> }
         </form>
     )
 
@@ -80,9 +79,9 @@ const TodoList = () => {
                         />
                         <label htmlFor={todo.id}>{todo.title}</label>
                     </div>
-                    {/* <button className="trash" onClick={() => deleteTodoMutation.mutate({ id: todo.id })}>
+                    { <button className="trash" onClick={() => deleteTodoMutation.mutate({ id: todo.id })}>
                         <FontAwesomeIcon icon={faTrash} />
-                    </button> */}
+                    </button> }
                 </article>
             )
         })
